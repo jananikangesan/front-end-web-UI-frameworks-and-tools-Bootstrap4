@@ -30,10 +30,12 @@
                     <li class="nav-item"><a class="nav-link" href=""><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul> 
-                  <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <!-- <span class="navbar-text">
+                     <a data-toggle="modal" data-target="#loginModal">
                     <span class="fa fa-sign-in"></span> Login</a>
-                </span>      
+                </span>       -->
+                <button type="button" id="btnlogin" class="btn btn-lg btn-outline-primary">   
+                    <span class="fa fa-sign-in"></span> Login</button>
             </div>
                        
         </div>
@@ -90,7 +92,8 @@
                     <!-- <a role="button" class="btn btn-block nav-link btn-warning"
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reserveform">Reserve Table</a> -->
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveFormModal">Reserve Table</a>    
+                    <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveFormModal">Reserve Table</a>     -->
+                    <button type="button" id="btnreverse" class="btn btn-lg btn-warning text-white">Reserve Table</button>    
                 </div>
             </div>
         </div>
@@ -444,6 +447,19 @@
                 }
             });
         });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#btnreverse").click(function(){
+                $("#reserveFormModal").modal();
+            });
+        });
+        $(document).ready(function(){
+            $("#btnlogin").click(function(){
+                $("#loginModal").modal();
+            });
+        });
+        
     </script>
 
 
